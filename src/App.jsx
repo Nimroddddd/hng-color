@@ -46,7 +46,6 @@ export default function App() {
   async function checkAnswer(id) {
     if (id === shadeLevel) {
       triggerRight()
-      levelUp()
     } else {
       triggerWrong()
       restart()
@@ -67,7 +66,8 @@ export default function App() {
     setVisible(true);
     setTimeout(() => {
       setVisible(false);
-      refreshColor()
+      refreshColor();
+      levelUp()
     }, 1000)
   }
 
