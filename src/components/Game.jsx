@@ -36,7 +36,7 @@ export default function Game(props) {
 
   return(
     <div className="flex items-center py-10 flex-col">
-      <div className={`h-48 w-48 ${colorShades[props.color][props.shadeLevel]} duration-300`}></div>
+      <div className={`h-48 w-48 ${colorShades[props.color][props.shadeLevel]} duration-300`} data-testid="colorBox"></div>
       <div className="flex w-[360px] gap-[40px] flex-wrap py-14">
         {colorShades[props.color].map(ListColor)}
       </div>

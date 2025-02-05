@@ -4,7 +4,7 @@ import { useState } from "react"
 export default function AnswerMessage(props) {
 
   return (
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center" data-testid="gameStatus">
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: props.visible ? 1 : 0 }}

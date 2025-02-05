@@ -22,7 +22,7 @@ export default function App() {
     rose: ["bg-rose-200", "bg-rose-300", "bg-rose-400", "bg-rose-500", "bg-rose-600", "bg-rose-700"],
   }
 
-  const { levelUp, restart } = useColorStore();
+  const { levelUp, restart, score } = useColorStore();
   const [currentColor, setCurrentColor] = useState(colors[0])
   const [shadeLevel, setShadeLevel] = useState(0)
   const [loading, setLoading] = useState(true)
@@ -55,6 +55,7 @@ export default function App() {
   function triggerWrong() {
     setMessage("Wrong ❌");
     setVisible(true);
+    setTimeout(() => alert(`Game over! Your score was ${score}`), 500)
     setTimeout(() => {
       setVisible(false);
       refreshColor()
